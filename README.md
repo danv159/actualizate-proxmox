@@ -122,7 +122,7 @@ qm set 4002 --agent enabled=1
    ***Network** \-\> Advanced \-\> MTU: 1450*  
 3. ***Cloud init:***   
    ***User**: mi-usuario*  
-   ***Password:** mi-password*
+   ***Password:** mi-password*  
    ***SSH public key:** my-ssh-pub-key*
    ```sh
    # si no se tiene claves ssh generalas en tu pc

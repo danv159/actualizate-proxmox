@@ -122,7 +122,13 @@ qm set 4002 --agent enabled=1
    ***Network** \-\> Advanced \-\> MTU: 1450*  
 3. ***Cloud init:***   
    ***User**: mi-usuario*  
-   ***Password:** mi-password*  
+   ***Password:** mi-password*
+   ***SSH public key:** my-ssh-pub-key*
+   ```sh
+   # si no se tiene claves ssh generalas en tu pc
+   ssh-keygen -t rsa -b 4096
+   cat ~/.ssh/id_rsa.pub
+   ```
    ***DNS servers:** 8.8.8.8*  
    ***Upgrade packages:** No (lo recomendado es Yes)*
 
@@ -132,7 +138,13 @@ qm set 4002 --agent enabled=1
 2. *Clic en **Start***  
 3. *Clic en **Console***  
 4. *Una vez iniciado el sistema loguearse con el usuario y contraseña.*
-
+```sh
+# loguearse por ssh desde nuestra PC.
+#Directamente
+ssh usuariovm@IPvm
+#Con salto ssh
+ssh -J user_puente@IP_puente usuariovm@IPvm
+```
 ## **6\. Crear un template de VM y Clonar VMs**
 
 ***Crear un template***

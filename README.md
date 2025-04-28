@@ -59,7 +59,7 @@ MANUAL PRÁCTICO DEL ESTUDIANTE
 1. *En la interfaz web: 👉 Clic en Nodo (expandir submenús)*  
     *👉 Clic en un volumen (ej local) \> ISO Images*  
     *👉 Clic en Upload o en Download from URL*
-    * Pegar la URL: [https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-12.10.0-amd64-netinst.iso](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-12.10.0-amd64-netinst.iso)  
+    * Pegar la URL: [http://10.188.106.84/isos/debian-12.10.0-amd64-netinst.iso](http://10.188.106.84/isos/debian-12.10.0-amd64-netinst.iso)  
     *👉 Selecciona ISO y súbela*
 
 ***Crear VM:***
@@ -91,7 +91,8 @@ apt update -y
 apt install libguestfs-tools -y
 
 # download a debian cloud-init disk image:
-wget https://cloud.debian.org/images/cloud/bookworm/20241125-1942/debian-12-genericcloud-amd64-20241125-1942.qcow2
+#wget https://cloud.debian.org/images/cloud/bookworm/20241125-1942/debian-12-genericcloud-amd64-20241125-1942.qcow2
+wget http://10.188.106.84/isos/debian-12-genericcloud-amd64-20241125-1942.qcow2
 
 virt-customize -a "debian-12-genericcloud-amd64-20241125-1942.qcow2" --install qemu-guest-agent --run-command 'ln -sf /usr/share/zoneinfo/America/La_Paz /etc/localtime' --run-command 'echo "America/La_Paz" > /etc/timezone'
 qemu-img resize debian-12-genericcloud-amd64-20241125-1942.qcow2 2G

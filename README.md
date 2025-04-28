@@ -58,7 +58,8 @@ MANUAL PRÁCTICO DEL ESTUDIANTE
 
 1. *En la interfaz web: 👉 Clic en Nodo (expandir submenús)*  
     *👉 Clic en un volumen (ej local) \> ISO Images*  
-    *👉 Clic en Upload o en Download from URL*  
+    *👉 Clic en Upload o en Download from URL*
+    * Pegar la URL: [https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-12.10.0-amd64-netinst.iso](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-12.10.0-amd64-netinst.iso)  
     *👉 Selecciona ISO y súbela*
 
 ***Crear VM:***
